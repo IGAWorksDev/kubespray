@@ -106,7 +106,7 @@
     dnf:
       enablerepo: "{{ docker_package_info.enablerepo | default(omit) }}"
     yum:
-      enablerepo: "{{ docker_package_info.enablerepo | default(omit) }}"
+      enablerepo: "{{ docker_package_info.enablerepo | default('') }}"
     zypper:
       update_cache: true
   register: docker_task_result
